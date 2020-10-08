@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import {useTransition, animated} from 'react-spring'
-import { Link } from "react-router-dom"
+import NavigationMenu from "./NavigationMenu";
   
 
 function Navigation(){
     const [showMenu, setShowMenu] = useState(false)
-    // className="fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow"
-    //mask
 
     const masktransitions = useTransition(showMenu, null, {
         from: { position: 'absolute', opacity: 0 },
@@ -47,18 +45,9 @@ function Navigation(){
                 <animated.div
                     key={key}
                     style={props} 
-                    className="fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow">
-                        <span className="font-bold">
-                            The Menu
-                        </span>
-                        <ul>
-                            <li>
-                            <Link to="/" className="text-blue-500">Home</Link>
-                            </li>
-                            <li>
-                            <Link to="/about" className="text-blue-500">About</Link>
-                            </li>
-                        </ul>
+                    className="fixed bg-white top-0 left-0 w-1/5 h-full z-50 shadow">
+                        
+                    <NavigationMenu closeMenu={()=>setShowMenu(false)} />
                 </animated.div>
                 )
             }
