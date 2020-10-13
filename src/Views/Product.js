@@ -15,7 +15,7 @@ function Product(){
     let content = null
 
     useEffect(() => {
-
+        
         setProduct({
             loading: true,
             data: null,

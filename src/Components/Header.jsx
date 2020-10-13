@@ -6,7 +6,6 @@ function Header(){
             <span className="font-bold">
                 AppName
             </span>
-
             <Navigation />
         </header>
     )

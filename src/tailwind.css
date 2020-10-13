@@ -10387,6 +10387,10 @@ video {
   height: 100%;
 }
 
+.h-40vh {
+  height: 40vh;
+}
+
 .h-screen {
   height: 100vh;
 }

@@ -4,36 +4,28 @@ import {
   Switch,
   Route
 } from "react-router-dom"
-import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Home from './Views/Home'
-import About from './Views/About'
-import Product from './Views/Product'
+import GenerateCode from './Views/GenerateCode'
 
 
 function App() {
   return (
     <header>
-      <div className="p-3">
+      <div>
         <Router>
-        <Header/>
           <Switch>
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/products/:id">
-              <Product />
+            <Route path="/GenerateCode">
+              <GenerateCode />
             </Route>
           </Switch>
+          <Footer/>
         </Router>
-
-        <Footer/>
       </div>
     </header>
-    
   )
 }
 
